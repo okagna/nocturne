@@ -1,8 +1,9 @@
 
 import { useState } from 'react';
 import { StyleSheet, Text, View, Pressable, Alert } from 'react-native';
- 
-const DEFIS = [
+import Bloc from '../composants/Cartes';
+
+const DEFIS = [   
   "Envoie un compliment sincère à quelqu'un de ton groupe",
   "Imite un pote du groupe, les autres doivent deviner qui c'est",
   "Parle avec un accent étranger pendant les 10 prochaines minutes",
@@ -52,27 +53,24 @@ export default function Accueil() {
           </Pressable>
         </View>
       </View>
+     
 
-      <View style={styles.defconf}>
+    <Text style={styles.univers}>Les univers de la nuit</Text>
+    <View style={styles.defconf1}>
+      <Bloc emoji="🎯" titre="Défis" sousTitre="Ose le ridicule" />
+      <Bloc emoji="🎯" titre="Défis" sousTitre="Ose le ridicule" />
+      
+    </View>  
 
-        <View><Text style={styles.deflog}>🎯</Text>
-          <Text style={styles.def}>Défis</Text>  
-          <Text style={styles.croissant}>Ose le ridicule</Text></View>
 
-          <View><Text style={styles.deflog}>🙈</Text>
-          <Text style={styles.def}>Conféssions</Text>  
-          <Text style={styles.croissant}>Balance ton histoire</Text></View>
-       
-      </View>
 
-      <View>
-        <Text style={styles.titre}>
-          NOCTURNE <Text style={styles.croissant}>☾</Text>
-        </Text>
-        <Text style={styles.slogan}>LA NUIT APPARTIENT AUX FOUS</Text>
-      </View>
+    <View style={styles.defconf2}>
+      <Bloc emoji="🎯" titre="Défis" sousTitre="Ose le ridicule" />
+      <Bloc emoji="🎯" titre="Défis" sousTitre="Ose le ridicule" />
+      
+    </View>  
 
-    </View>
+ </View>
   );
 }
  
@@ -82,13 +80,15 @@ const styles = StyleSheet.create({
     backgroundColor: '#000',
     alignItems: 'center',
     justifyContent: 'flex-start',
-    paddingTop: 150,
+    paddingTop: 65,
   },
  
   titreslogan: {
-    position: 'absolute',
-    top: 70,
-    left: 25,
+    width: '95%',
+    alignItems: 'flex-start',
+    justifyContent: 'flex-start',
+    marginBottom: 20,
+
   },
  
   titre: {
@@ -114,7 +114,7 @@ const styles = StyleSheet.create({
     paddingVertical: 20,
     borderRadius: 30,
     backgroundColor: '#1E1433',
-    width: '90%',
+    width: '95%',
     minHeight: '20%',
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
@@ -176,5 +176,29 @@ const styles = StyleSheet.create({
     fontSize: 15,
     fontWeight: 'bold',
   },
+
+  defconf1: {
+    flexDirection: 'row',
+    width: '95%',
+    marginTop: 10,
+    gap: 10,},
+
+      defconf2: {
+    flexDirection: 'row',
+    width: '95%',
+    marginTop: 10,
+    gap: 10,},
+
+    univers: {
+      color: '#ffff',
+      fontWeight: 'bold',
+      fontSize: 20,
+      width: '95%',
+      marginTop: 20,
+},
+
+  
+
+  
 });
  
