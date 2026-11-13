@@ -19,7 +19,17 @@ const styles = StyleSheet.create({
     padding: 16,},
 
 
-  emoji: { fontSize: 25, marginBottom: 10 },
-  titre: { color: '#fff', fontSize: 16,marginBottom: 9, fontWeight: '700' },
-  sousTitre: { color: '#8A7FA8', fontSize: 13 },
+  emoji: { 
+    fontSize: 30, 
+    marginBottom: 10 
+  },
+  titre: { 
+    color: '#fff', 
+    fontSize: 16,
+    marginBottom: 9, 
+    fontWeight: '700' },
+
+  sousTitre: { 
+    color: '#8A7FA8', 
+    fontSize: 13 },
 });

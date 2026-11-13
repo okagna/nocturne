@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { StyleSheet, Text, View, Pressable, Alert } from 'react-native';
 import Bloc from '../composants/Cartes';
-
+import Footer from '../composants/Footer';
 const DEFIS = [   
   "Envoie un compliment sincère à quelqu'un de ton groupe",
   "Imite un pote du groupe, les autres doivent deviner qui c'est",
@@ -64,11 +64,18 @@ export default function Accueil() {
 
 
 
-    <View style={styles.defconf2}>
+    <View style={styles.defconf1}>
       <Bloc emoji="🎯" titre="Défis" sousTitre="Ose le ridicule" />
       <Bloc emoji="🎯" titre="Défis" sousTitre="Ose le ridicule" />
       
     </View>  
+
+      <Footer 
+      acc="☾" 
+      defis="✧"  
+      confessions="❝"  
+      potes="⛬"  
+      profil="◉"  />      
 
  </View>
   );
@@ -77,7 +84,7 @@ export default function Accueil() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#000',
+    backgroundColor: '#0B0814',
     alignItems: 'center',
     justifyContent: 'flex-start',
     paddingTop: 65,
@@ -112,7 +119,7 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     paddingHorizontal: 20,
     paddingVertical: 20,
-    borderRadius: 30,
+    borderRadius: 20,
     backgroundColor: '#1E1433',
     width: '95%',
     minHeight: '20%',
@@ -183,21 +190,14 @@ const styles = StyleSheet.create({
     marginTop: 10,
     gap: 10,},
 
-      defconf2: {
-    flexDirection: 'row',
-    width: '95%',
-    marginTop: 10,
-    gap: 10,},
 
     univers: {
       color: '#ffff',
       fontWeight: 'bold',
-      fontSize: 20,
+      fontSize: 25,
       width: '95%',
-      marginTop: 20,
+      marginTop: 15,
 },
-
-  
 
   
 });
